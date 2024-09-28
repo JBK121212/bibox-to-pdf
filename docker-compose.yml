@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   bibox-to-pdf:
     image: ghcr.io/lasser15/bibox-to-pdf:latest
