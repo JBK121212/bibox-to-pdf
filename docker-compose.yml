@@ -1,7 +1,10 @@
 services:
   bibox-to-pdf:
     image: ghcr.io/lasser15/bibox-to-pdf:latest
+    restart: no
     build:
       context: .
     volumes:
       - ./books:/app/output/books
+    ports:
+      - '4200:4200'

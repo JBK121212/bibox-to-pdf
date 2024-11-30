@@ -14,7 +14,7 @@ def get_bibox_images(access_token: str, book_id: int):
 
     if response.status_code != 200:
         print(f"Response code from server was not 200. "
-              f"Either the book id '{book_id}' doesn't exist or the login wasn't successful. "
+              f"Are you sure the book id '{book_id}' exists and you have access to it? Response code was {response.status_code}.\n"
               f"Exiting!")
         raise typer.Exit(1)
 
