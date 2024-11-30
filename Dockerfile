@@ -11,7 +11,7 @@ RUN apk add --no-cache tesseract-ocr tesseract-ocr-data-deu ghostscript
 COPY /src ./src
 COPY /requirements.txt ./requirements.txt
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 ENV PYTHONPATH=/app/src/
 ENV BASE_OUTPUT_PATH=/app/output
