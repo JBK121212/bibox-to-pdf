@@ -8,7 +8,7 @@ def ocr_pdf(book_id: int, pdf_non_ocr_path: str):
     pdf_output_dir = Constants.pdfOutputDir.format(book_id)
     os.makedirs(pdf_output_dir, exist_ok=True)
 
-    print("Starting PDF ocr in German...")
+    print("Starting PDF ocr in German (if you need another language please open an issue on GitHub)...")
 
     pdf_output_file = Constants.pdfOutputFile.format(book_id, 'ocr-version')
 

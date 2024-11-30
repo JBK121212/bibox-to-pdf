@@ -1,5 +1,6 @@
-typer~=0.12.5
-playwright~=1.47.0
-ocrmypdf~=16.5.0
+typer~=0.14.0
+ocrmypdf~=16.6.2
 img2pdf~=0.5.1
 requests~=2.32.3
+fastapi~=0.115.5
+uvicorn~=0.32.1
