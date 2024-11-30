@@ -92,35 +92,29 @@ There are two variants/tags available:
 #### Docker Compose
 To use the ocr version of the script with Docker Compose run the following command:
 ```bash
-docker compose run --rm -it bibox-to-pdf \
-    '{USERNAME}' '{PASSWORD}' {BOOK_ID}
+docker compose run --rm -Pit bibox-to-pdf {BOOK_ID}
 ```
 <!-- CURRENTLY NOT AVAILABLE
 If you want to run the non-ocr version run the following command.
 
 You can also simply add `--no-ocr` before the username in the above command.
 ```bash
-docker compose -f ./docker-compose.non-ocr.yml --rm -it run bibox-to-cli \
-    '{USERNAME}' '{PASSWORD}' {BOOK_ID}
+docker compose -f ./docker-compose.non-ocr.yml --rm -Pit run bibox-to-cli {BOOK_ID}
 ```
 -->
 #### Docker CLI
 To use the script with ocr via Docker run the following command:
 ```bash
-docker run --rm -it \
-    -v ./books:/app/output/books \
-    ghcr.io/lasser15/bibox-to-pdf:latest \
-    '{USERNAME}' '{PASSWORD}' {book_id}
+docker run --rm -it -p 4200:4200 -v ./books:/app/output/books \
+    ghcr.io/lasser15/bibox-to-pdf:latest {book_id}
 ```
 <!-- CURRENTLY NOT AVAILABLE
 To use it without ocr, run the following command.
 
 You can also simply add `--no-ocr` before the username in the above command.
 ```bash
-docker run --rm -it \
-    -v ./books:/app/output/books \
-    ghcr.io/lasser15/bibox-to-pdf:latest-non-ocr \
-    '{USERNAME}' '{PASSWORD}' {book_id}
+docker run --rm -it -p 4200:4200 -v ./books:/app/output/books \
+    ghcr.io/lasser15/bibox-to-pdf:latest-non-ocr {book_id}
 ```
 -->
 
